@@ -1,0 +1,38 @@
+<html>
+<style>
+    body {
+        background: #000;
+    }
+    .ripple{
+        width: 10px;
+        height: 10px;
+        margin: 200px auto;
+        
+    }
+    .ripple div{
+        transform: translate(-50% , -50%);
+        border:6px solid red;
+        animation: ripple 1s cubic-bezier(0.25, 0.52, 0.1, .1) infinite;
+        border-radius: 50%;
+        animation-delay:1s;
+    }
+    @keyframes ripple{
+        0%{
+            width:0;
+            height:0;
+            opacity:1;
+        }
+        100%{
+            width:188px;
+            height:188px;
+            opacity:0;
+        }
+    }
+</style>
+
+<body>
+    <div class="ripple">
+        <div></div>
+    </div>
+</body>
+</html>
